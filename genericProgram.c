@@ -13,6 +13,13 @@ typedef struct {
     char name[15]; 
 } Person; 
 
+int compareFloat (const void * a, const void * b) {
+   return  *(float*)a - *(float*)b;
+}
+
+// initialize an array of floating point numbers
+    float numbers[] = {645.32, 37.40, 76.30, 5.40, -34.23, 1.11, -34.94, 23.37, 635.46, -876.22, 467.73, 62.26}; 
+
 int main(void) {
 
     // initialize an array of persons (aka people)
@@ -36,17 +43,21 @@ int main(void) {
         { 25, "Natalie" }
     }; 
 
-    // initialize an array of floating point numbers
-    float numbers[] = {645.32, 37.40, 76.30, 5.40, -34.23, 1.11, -34.94, 23.37, 635.46, -876.22, 467.73, 62.26}; 
 
-    for(int i = 0; i < NUM_PEOPLE; i++){
-        printf( "Name: %s, Age: %d\n", people[i].name, people[i].age); 
-    }
+    printf("Before sorting the list: \n");
 
     for(int i = 0; i < TOTAL_NUMBERS; i++){
         printf( "Number: %f\n", numbers[i]); 
     }
- 
+
+    qsort(numbers, TOTAL_NUMBERS, sizeof(float), compareFloat); 
+
+    printf("\nAfter sorting the float list is: \n"); 
+    
+    for(int i = 0; i < TOTAL_NUMBERS; i++){
+        printf( "Number: %f\n", numbers[i]); 
+    }
+     
     // terminate program 
     return 0; 
 }
