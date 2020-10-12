@@ -18,7 +18,7 @@ define data types explicitly in many cases.
 2. Visit: https://repl.it/
 3. In the homepage, select: Start Coding 
 4. Import from GitHub 
-5. Enter the following url: https://github.com/kevinjaypatel/Generic-Sorting-Function-in- C.git
+5. Enter the following url: https://github.com/kevinjaypatel/Generic-Sorting-Function-in-C.git
 6. Run the file: genericProgram.c
         
 Happy Coding :)
