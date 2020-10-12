@@ -52,19 +52,23 @@ int compareAge(const void*a, const void* b);
 
 int main(void) {
 
-    SortFloatingNumbers(); 
-    SortByName(); 
-    // SortByAge(); 
+    // SortFloatingNumbers(); 
+    // SortByName(); 
+    SortByAge(); 
     
     // terminate program 
     return 0; 
 }
 
 void SortByAge() {
+
     printf("Before sorting the list: \n"); 
     PrintPeoplesArray(); 
 
     qsort(people, NUM_PEOPLE, sizeof(Person), compareAge); 
+
+    printf("\nAfter sorting the peoples list is: \n"); 
+    PrintPeoplesArray(); 
 }
 
 void PrintFloatingArray() {
@@ -75,7 +79,7 @@ void PrintFloatingArray() {
 
 void PrintPeoplesArray() {
     for(int i = 0; i < NUM_PEOPLE; i++) {
-        printf("Name: %s\n", people[i].name); 
+        printf("Name: %s, Age: %d\n", people[i].name, people[i].age); 
     }
 }
 
@@ -121,7 +125,7 @@ int compareAge(const void* a, const void* b) {
     if(firstPerson->age == secondPerson->age) {
         return compareNames(firstPerson, secondPerson); 
     } 
-    return *(int*)firstPerson->age - *(int*)secondPerson->age; 
+    return firstPerson->age - secondPerson->age; 
 }
     
 
