@@ -17,26 +17,6 @@
 
 // initialize an array of floating point numbers
 float numbers[] = {645.32, 37.40, 76.30, 5.40, -34.23, 1.11, -34.94, 23.37, 635.46, -876.22, 467.73, 62.26}; 
-// initialize an array of persons (aka people) 
- Person people[] = {
-        { 20, "Hal" }, 
-        { 31, "Susann" }, 
-        { 19, "Dwight" }, 
-        { 21, "Kassandra" }, 
-        { 25, "Lawrence" },
-        { 22, "Cindy" }, 
-        { 27, "Cory" }, 
-        { 19, "Mac" }, 
-        { 27, "Romana" }, 
-        { 32, "Doretha" }, 
-        { 20, "Danna" }, 
-        { 23, "Zara" }, 
-        { 26, "Rosalyn" }, 
-        { 24, "Risa" }, 
-        { 28, "Benny" }, 
-        { 33, "Juan" }, 
-        { 25, "Natalie" }
-    }; 
 
 void SortFloatingNumbers(); // Sort floating numbers prototype 
 void SortByName(); // Sort by name prototype 
@@ -81,6 +61,7 @@ void PrintFloatingArray() {
     for(int i = 0; i < TOTAL_NUMBERS; i++) {
         printf("%f \n", numbers[i]); 
     }
+    printf("\n"); 
 }
 
 void PrintPeoplesArray() {
@@ -88,6 +69,7 @@ void PrintPeoplesArray() {
         // loop through and print all people in peoples array 
         printf("%s, %i \n", people[i].name, people[i].age); 
     }
+    printf("\n"); 
 }
 
 void SortFloatingNumbers() { 
