@@ -78,9 +78,17 @@ void SortFloatingNumbers() {
 }
 
 int compareFloat(const void* a, const void* b) {
-    // casts both parameters as pointers to float data types using (float*)
-    // return the difference among both float values 
-    return  *(float*)a - *(float*)b;
+    // find the difference between both floating point values 
+    float differenceBetweenFloats = *(float*)a - *(float*)b; 
+
+    if(differenceBetweenFloats > 0) {
+        return 1; // if the first floating value is greater than the second, return 1 
+    } else if(differenceBetweenFloats < 0){
+        return -1; // if the first floating value is lesser than the second, return -1
+    } else {
+        return 0; // if both floating values are the same, return 0
+    }
+    
 }
 
 int compareAge(const void* a, const void* b) { 

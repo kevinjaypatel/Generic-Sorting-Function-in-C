@@ -4,7 +4,7 @@
 typedef struct {
     int age; // age of a person  
     char name[15]; // name of a person as a string 
-} Person; 
+} Person; // name of struct 
 
 // initialize an array of persons (aka people) 
  Person people[] = {
